@@ -1,10 +1,10 @@
 <template>
-  <div>个人中心</div>
+  <div></div>
 </template>
 
 <script type="text/ecmascript-6">
   export default {
-    name:'personal',
+    name:'search',
   }
 </script>
 

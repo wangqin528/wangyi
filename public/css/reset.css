@@ -1,5 +1,8 @@
 @import "./iconfont.css";
- 
+html,body{
+    height: 100%;
+    width: 100%;
+}
 /* 清除内外边距 */
 body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
 dl, dt, dd, ul, ol, li,
@@ -66,7 +69,9 @@ a:link:hover{
     color : rgb(79, 76, 212) !important;
     text-decoration: underline;
 }
-
+.active{
+    color: #ab2b2b !important;
+}
 /* 清除浮动 */
 .clearfix::after {
     display: block;

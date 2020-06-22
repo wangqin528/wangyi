@@ -2,42 +2,59 @@
   <div class="tabbarWrap">
       <div class="tab">
           <div class="item" >
-            <div class="iconfont icon-home"></div>
-            <span class="txt">首页</span>
+           <router-link  to="/" exact> 
+              <div class="iconfont icon-home"></div>
+              <span class="txt">
+                首页 
+                </span> 
+            </router-link>
           </div>
-          <div class="item" >
-            <div class=" iconfont icon-liebiao2"></div>
-            <span class="txt">分类</span>
-          </div>
-          <div class="item ">
-            <div class="iconfont icon-31shoucang"></div>
-            <span class="txt">值得买</span>
-          </div>
-          <div class="item ">
-            <div class="iconfont icon-cart"></div>
-            <span class="txt">购物车</span>
-          </div>
-          <div class="item ">
-            <div class="iconfont icon-mine"></div>
-            <span class="txt">个人</span>
-          </div>
+          <router-link  to="/sort">
+             <div class="item" >
+                <div class=" iconfont icon-liebiao2"></div>
+                <span class="txt">分类</span>
+              </div>
+          </router-link>
+         <router-link  to="/buy"> 
+            <div class="item ">
+              <div class="iconfont icon-31shoucang"></div>
+              <span class="txt">值得买</span>
+            </div>
+         </router-link>
+         
+           <router-link  to="/shoppingcart">
+             <div class="item " > 
+                <div class="iconfont icon-cart"></div>
+                <span class="txt">购物车</span>
+              </div>
+         </router-link>
+        
+           <router-link  to="/personal">
+            <div class="item ">
+              <div class="iconfont icon-mine"></div>
+              <span class="txt">个人</span>
+            </div>
+         </router-link>
+      
       </div>
+      
   </div>
 </template>
 
 <script type="text/ecmascript-6">
   export default {
     name:'tabbar',
+    
   }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
+<style lang="stylus" rel="stylesheet/stylus" scoped>
   .tabbarWrap
-      position :absolute
+      position :fixed
       bottom :0
       width: 100%
       height:98px
-   
+      background-color :#fff
       .tab
          width :100%
          display :flex
@@ -53,6 +70,12 @@
             height:71px
             text-align :center
             box-sizing :border-box
+           .router-link-active
+                color:#b4282d
+                .icon path
+                
+                   fill: #1b2b2b
+                   
             .txt 
               text-align :center
               font-size :24px
